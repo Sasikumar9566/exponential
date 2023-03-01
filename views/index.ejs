@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+</head>
+
+<body>
+  <style>
+    #wrapper {
+      padding: 25px;
+    }
+    form button{
+      margin-top: 10px;
+    }
+  </style>
+  <div id="wrapper">
+    <form action="/exponential" method="POST">
+      <div>
+        <label for="exponential label">Enter your exponential series number:</label>
+        <input type="number" id="exponential" name="exponential" required placeholder="Enter integer value!">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <p><strong><%= comments%></strong></p>
+    <% exponential.forEach((ele) => {%>
+    <button type="button" disabled><%= ele %></button>
+    <% });%>
+  </div>
+</body>
+
+</html>
